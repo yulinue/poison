@@ -5126,3 +5126,137 @@ textarea.input {
   border-radius: 1em;
   border: 1px solid var(--gray1);
 }
+
+/* promo page */
+.page__promo .questions__tab-title{
+  border-bottom: none;
+}
+
+.page__promo .questions__text p{
+  text-align: justify;
+}
+
+.page__promo .about-page__subtitle{
+  text-align: justify;
+}
+
+.page__promo .banner-profile{
+  position: relative;
+  width: 73.2em;
+}
+
+.page__promo .banner-profile__content{
+  padding: 2em 4em 11em 2em;
+  gap: 0;
+  width: 100%;
+}
+
+.page__promo .banner-profile__body{
+  gap: 1.5rem;
+}
+
+.page__promo .about-page__wrap{
+  gap: 5.5rem;
+}
+
+.page__promo .banner-profile__text{
+  max-width: 24em;
+}
+
+.page__promo .banner-profile__image{
+  width: 40em;
+  height: 40em;
+  position: absolute;
+  bottom: -4rem;
+  right: -1rem;
+}
+
+.page__promo .text-main p, .page__promo .title-xl{
+  letter-spacing: -0.05em;
+}
+
+.page__promo .button-white{
+  border: none;
+  padding: 0.5em 1.5em;
+}
+
+@media (max-width: 991.98px) {
+  .page__promo .about-page__wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .page__promo .about-page__body{
+    max-width: 95%;
+  }
+
+  .page__promo .detail-page__wrap{
+      display: -ms-grid;
+      display: grid;
+      -ms-grid-columns: 1fr 2rem 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+  }
+
+  .page__promo .detail-page__buttons{
+    width: 73.2em;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .page__promo .banner-profile, .page__promo .detail-page__buttons{
+    width: 100%;
+  }
+}
+
+@media (max-width: 570px) {
+  .page__promo .banner-profile__content{
+    padding-bottom: 16em;
+  }
+
+  .page__promo .banner-profile__image{
+    width: 35em;
+    height: 35em;
+    bottom: -2rem;
+    right: -1rem;
+  }
+}
+
+@media (max-width: 526px) {
+  .page__promo .detail-page__wrap{
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2rem 1fr;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+}
+
+@media (max-width: 415px) {
+  .page__promo .banner-profile__image{
+    bottom: -3rem;
+    right: -1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .page__promo .banner-profile__content{
+    padding-bottom: 10em;
+  }
+  .page__promo .banner-profile__image{
+    display: none;
+  }
+}
