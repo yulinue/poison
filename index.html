@@ -13,6 +13,74 @@
 		<meta name="robots" content="noindex, nofollow" />
 	</head>
 	<body>
+
+	<!-- модалка -->
+	<div class="modal-overlay">
+		<div class="modal-container">
+			<button id="closeFirstModal" class="close-modal">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M9.17188 14.83L14.8319 9.17001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+				<path d="M14.8319 14.83L9.17188 9.17001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+			  </svg></button>
+			<h3>Как оформить заказ?</h3>
+
+			<!-- Slider main container -->
+			<div class="swiper slider-modal">
+				<!-- Additional required wrapper -->
+				<div class="swiper-wrapper">
+				<!-- Slides -->
+				<div class="swiper-slide">
+					<div class="slide-item">
+						<div class="slider-item__number">1</div>
+						<img src="img/modal/cart.png" alt="" loading="lazy">
+						<hr>
+						<p>Выберите товар на сайте и добавьте его в корзину</p>
+					</div>
+
+					<div class="slide-item">
+						<div class="slider-item__number">2</div>
+						<img src="img/modal/register.png" alt="" loading="lazy">
+						<hr>
+						<p>Зарегистрируйтесь, оформите и оплатите заказ онлайн</p>
+					</div>
+
+					<div class="slide-item">
+						<div class="slider-item__number">3</div>
+						<img src="img/modal/cn.png" alt="" loading="lazy">
+						<hr>
+						<p>Мы выкупим ваш товар и отправим его в Россию</p>
+					</div>
+				</div>
+				<div class="swiper-slide">
+					<div class="slide-item">
+						<div class="slider-item__number">4</div>
+						<img src="img/modal/pack.png" alt="" loading="lazy">
+						<hr>
+						<p>Передадим ваш заказ в СДЭК и отправим вам трек-номер</p>
+					</div>
+
+					<div class="slide-item">
+						<div class="slider-item__number">5</div>
+						<img src="img/modal/present.png" alt="" loading="lazy">
+						<hr>
+						<p>Заказ придет на пукнт выдачи, вам останется только забрать его</p>
+					</div>
+				</div>
+				</div>
+				<!-- If we need pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
+			
+			<div class="modal-btns">
+				<button class="modal__next-btn">Далее</button>
+				<button class="modal__skip-btn">пропустить</button>
+			</div>
+
+		</div>
+	</div>
+	<!-- модалка -->
+
 		<div class="wrapper">
 <header class="header">
 	<div class="header__banner popup popup-banner open">

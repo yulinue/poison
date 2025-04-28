@@ -745,5 +745,104 @@ function initSliders() {
 	}
 }
 
-
 initSliders();
+
+// window.onload = () => {
+// 	modalOverlay = document.querySelector('.modal-overlay');
+// 	modalClose = document.querySelector('#closeFirstModal');
+
+// 	if (!localStorage.getItem('modalShown')) {
+// 		modalOverlay.classList.add('active'); // Показываем модалку
+// 		localStorage.setItem('modalShown', 'true'); // Запоминаем, что показали
+// 	  }
+
+// 	modalClose.addEventListener('click', () => {
+// 		modalOverlay.classList.toggle('active');
+// 	})
+// };
+
+
+// 	const swiper = new Swiper('.slider-modal', {
+	  
+// 		// If we need pagination
+// 		pagination: {
+// 		  el: '.swiper-pagination',
+// 		},
+// 	  });
+
+// 	  const nextSlideBtn = document.querySelector('.modal__next-btn');
+// 	  const skipBtn = document.querySelector('.modal__skip-btn');
+
+// 	nextSlideBtn.addEventListener('click', () => {
+// 		if (swiper.isEnd) {
+// 			modalOverlay.classList.toggle('active');
+// 		} else {
+// 		swiper.slideNext(); // Переход на следующий слайд
+// 		}
+// 	});
+
+// 	skipBtn.addEventListener('click', () => {
+// 		modalOverlay.classList.toggle('active');
+// 	});
+
+// 	// Следим за сменой слайда, чтобы менять текст кнопки
+// 	swiper.on('slideChange', () => {
+// 		if (swiper.isEnd) {
+// 		nextSlideBtn.textContent = 'К покупкам';
+// 		} else {
+// 		nextSlideBtn.textContent = 'Далее';
+// 		}
+// 	});
+
+window.onload = () => {
+	const modalOverlay = document.querySelector('.modal-overlay');
+	const modalClose = document.getElementById('closeFirstModal');
+	const nextSlideBtn = document.querySelector('.modal__next-btn');
+	const skipBtn = document.querySelector('.modal__skip-btn');
+	let swiperInstance = null;
+  
+	function openModal() {
+	  modalOverlay.classList.add('active');
+  
+	  if (!swiperInstance) {
+		swiperInstance = new Swiper('.slider-modal', {
+		  pagination: {
+			el: '.swiper-pagination',
+			clickable: true,
+		  },
+		});
+  
+		nextSlideBtn.addEventListener('click', () => {
+		  if (swiperInstance.isEnd) {
+			modalOverlay.classList.remove('active');
+		  } else {
+			swiperInstance.slideNext();
+		  }
+		});
+  
+		skipBtn.addEventListener('click', () => {
+		  modalOverlay.classList.remove('active');
+		});
+  
+		// Смена текста на кнопке
+		swiperInstance.on('slideChange', () => {
+		  if (swiperInstance.isEnd) {
+			nextSlideBtn.textContent = 'К покупкам';
+		  } else {
+			nextSlideBtn.textContent = 'Далее';
+		  }
+		});
+	  }
+	}
+  
+	// Проверка, показывали ли уже модалку
+	if (!localStorage.getItem('modalShown')) {
+	  openModal();
+	  localStorage.setItem('modalShown', 'true');
+	}
+  
+	modalClose.addEventListener('click', () => {
+	  modalOverlay.classList.remove('active');
+	});
+  };
+  
